@@ -37,7 +37,6 @@ def twitter_handle(domainUrl):
 	url = domainUrl
 	r = requests.get(url)
 	soup = BeautifulSoup(r.content)
-
 	desc = soup.find("meta", {"name": "description"})
 	desc = soup.findAll(attrs={"name":"description"})
 	description = desc[0]['content'].encode('utf-8')
@@ -49,11 +48,12 @@ def twitter_handle(domainUrl):
 	#BG_IMG = soup.find_all("img", {"class": "_xlg img"})
 	#BG_IMG = [x['img'] for x in soup.findAll('div', {'class': 'ProfileCanopy-headerBg'})]
 	#return {'LOGO_URL>>':LOGO_IMG, 'BG_IMG_URL>>':BG_IMG}
-	return {'brand desc: ':description}
+	return {'brand desc: ':description,'domain_url':url}
 
 assets = []
 for domain in domains:
 	assets = twitter_handle(domain)
-	f.write(str(assets))
+	f.write(str(assets) + "\n")
+
 
 f.close()
