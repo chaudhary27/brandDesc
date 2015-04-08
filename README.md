@@ -5,9 +5,9 @@ this tool will scrape description from meta tags given a domain_url. text is enc
 
 Following dependencies nees to be installd before running
 
-1.pip install pyopenssl ndg-httpsclient pyasn1
-2.sudo easy_install requests
-3.pip install beautifulsoup4
+1. pip install pyopenssl ndg-httpsclient pyasn1
+2. sudo easy_install requests
+3. pip install beautifulsoup4
 
 To run: 
 1. enter domain urls in csv file comma separated ex (http://times.com,http://betaboston.com)
