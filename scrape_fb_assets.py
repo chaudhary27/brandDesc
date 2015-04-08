@@ -53,7 +53,7 @@ def twitter_handle(domainUrl):
 assets = []
 for domain in domains:
 	assets = twitter_handle(domain)
-	f.write(str(assets) + "\n")
+	f.write(str(assets) + "\n" + "\n")
 
 
 f.close()
